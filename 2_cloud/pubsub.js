@@ -36,4 +36,6 @@ async function fetchApiAndSaveInBucket() {
     }
 }
 
-fetchApiAndSaveInBucket();
+functions.http('Trigger', (req, res) => {
+    fetchApiAndSaveInBucket();
+  });
