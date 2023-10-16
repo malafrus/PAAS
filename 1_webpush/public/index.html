@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+
+    <script src="js/utils.js"></script>
+</head>
+<body>
+    <button onclick="subscribe()">Subscribe</button>
+
+    <script>
+
+        if ('serviceWorker' in navigator) {
+            addEventListener('load', async () => {
+                let sw = await navigator.serviceWorker.register('service-worker.js',{scope: "/"});
+                console.log(sw);
+            });
+        }
+
+        async function subscribe() {
+            console.log("Subscribe")
+            let sw = await navigator.serviceWorker.ready;
+            let push = await sw.pushManager.subscribe({
+                userVisibleOnly: true,
+                applicationServerKey:urlBase64ToUint8Array('BIwMDxNTmnMU-7tDxZHOSq3f53OANhNtBruKDDJ73PuSchmDaNYGlsHaUD3SqxW0TgzC5afmfYHzJLmCqFsyz1c')
+                
+            })
+            console.log(JSON.stringify(push));
+            try {
+                const response = await fetch('/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ subscibe: push }),
+                    //body: JSON.stringify(push),
+                });
+            } catch (error) {
+                console.error('Erreur lors de la requête POST', error);
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

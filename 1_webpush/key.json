@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "androidprojecttrochon",
+  "private_key_id": "b39e408bc3d19d8de93415f960dbc2afcaa50587",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCex3rYNhBfE8Ws\nlU1qvaBMhpKIp6TnlWIkSg1jYqj3j82vORXomOjx01GSFR0exzC+0dFNbuwxQ79g\ngKyz1GMI7RJ2HJwjl7FO5EQ0QrdjGdc42MWNkiF67Kt+k8V1OkyMiYTCI3KHRpYG\nul//SO0PXm6yXj4G9yG0UT9ynYylFYJo/OqNJQ6h3VOnNCHRx3AxBI1sg3/CFfYD\nQ5O4mnLwj19lOG0TprBHwxYQLKE9h5TZNx2ouwsGd4yAkZ/k/jMuEIbhJFwBmp9e\nL82lVbEuvebw61jPG97MrN3ZQ7ZEroLhh04e4sJiZ8l7VvhKtEGaKuUrgVK+cEVA\n5HM0/neFAgMBAAECggEABQNc8fdzBa14IxgFSiBGljDBiHMFyXh1kTPAjHZdY100\n+ObsHCkhYbel7njTYvKWRWmwGnb5s7lLd5G+4i0LtQjXLMeAEb4Ewrrn55NO4WAi\nSkP92/4H9JU4YCMf3uQPIRJoEKeFD2RZJEk9WRZ4wnCqChOtRBPVcP4HuAF/CU9B\nwaNR1YS5/IYqXSWbcn6k6CIfTtZAdUx2dRRZN89B/vBC5C4EHApYLBk5YmXTGnVt\nh5lukh24zuyXQ1MaurfF40tOdHjvTijpLFKpvnQ7Qp5xVZbm/7jUryo6Y34s0j1B\nDyGz9T15FmlJMy8sVTssIuSE3ppc9bNCnH416HoswQKBgQDeC6XQq6kTJ2/kJZnU\nwhx3Lck2RP7CPduhzckFDDm2l1qxF+NvYGicU7m5OYgctKjTi6NrkMehZQOiErbk\no+fjQOe9iA2d0pRExWCEw6ItyA3XHhE7uSplbwkyW6BeOfKUCzbpf8vv3Y6zyncZ\niHzMRAP/c3z2F3FMD7HfYld0aQKBgQC3Dyo7R8Fs5di2zd3tPYgbwXvXtCrohwif\nu/xTqheRRRT69Bej0s8Zo5g/ifwsNqegkEQyhUhRc0GQRd9Tv3dVCkJBFg8ZjRMB\nnSKpyfM9RVH9zl5rpPvdoOEXAzwS2zdxMIjr8+HtzQ3Jq0kkCnr9BhlEpVsrAiAK\nynVWE3iWvQKBgF6/f6DcLwhCUsd6l/qmXbkpK2vh4weFl7uicP2bauEUEpnwxJbY\n/6p9O4njF8aP/F5Qfoo+vECNNxCohaxomGFrZ7eDX7QRkD0MMBRW2lRIwkchyF7A\ns2uXBsibOoIanf04D9VxN9eBpgvoAAxAJmiPOVl+sTrdY/X92HumngTJAoGAEOYj\nfel337ewM9/5VsdRY06PQjBtrZ2ZnDVca9TN7Ck2cJxL+mGhoLpLecIhN2usOdRX\nl1pafLppGQp6PV71gzI5P4zrw+4UDRgWdRohjExz7zw31zQZ1DHf1aIEz7DRA2/5\nk96lwrAlT7KyQ9N72xPPDVk+e0/s6VIbVuDhRvkCgYAUNdbHgBps64oLxiaMDbMI\nRmB7bZeXa3qTzOaXrA6pWd6zX2YPjKzUXyXiYT/j+BMWML8DqiNN0tbZdgZ15FI9\nGVAjxayKr+X+n7/LVUmKJfp37g7MK7IXuNhhLKPxz2oJq7DC0qZcwsNfMneqUU+G\nA4OieQl88lTCU7lACTFjLQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "trochon@androidprojecttrochon.iam.gserviceaccount.com",
+  "client_id": "115284039435282491741",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/trochon%40androidprojecttrochon.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

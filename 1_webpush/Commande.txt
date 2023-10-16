@@ -1,0 +1,6 @@
+docker stop NODE 
+docker rm NODE
+docker image rm nodeserv
+docker build . -t nodeserv
+docker run -ti -p 80:3000 --name NODE -v C:\Users\ADM\Desktop\Perso\ecole\M2CCM\PAAS\TD2:/usr/src/app nodeserv /bin/bash
+node src/app.js

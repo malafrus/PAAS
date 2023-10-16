@@ -6,10 +6,10 @@ const urlApiJCDecaux = "https://api.jcdecaux.com/vls/v1/stations?contract=amiens
 const projectId = ' androidprojecttrochon';
 const bucketName = 'malafrus-bucket-velib-libre'; 
 
-//const keyFilename = './key.json'
+//const keyFilename = './key.json'   //local
 //const storage = new Storage({ keyFilename,projectId });
 
-const storage = new Storage({ projectId });
+const storage = new Storage({ projectId }); //cloud
 
 async function fetchApiAndSaveInBucket() {
     try {
@@ -20,8 +20,12 @@ async function fetchApiAndSaveInBucket() {
 
         const data = await response.json();
 
+        const timestamp = Date.now(); 
+        const fileName = `data_${timestamp}.json`;
+    
+
         const bucket = storage.bucket(bucketName);
-        const file = bucket.file('data.json');
+        const file = bucket.file(fileName);
 
         await file.save(JSON.stringify(data), {
             contentType: 'application/json',
