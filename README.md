@@ -17,5 +17,7 @@ Le Cloud Scheduler est gratuit car on nous offre jusqu'à 3 jobs par mois. Sans 
 
 - Pub/sub : https://cloud.google.com/pubsub/pricing?hl=fr
 
+
 - Bucket : https://cloud.google.com/storage/pricing?hl=fr#europe
+Le prix du bucket s'éstime par rapport de la région et de la volumetrie par mois. Etant données que notre API se trouve en france, il serai plus intéressant de stocker nos données en france. On prend donc la région de Paris (europe-west9) ce qui nous revient à 0,0023$/mois.
   
