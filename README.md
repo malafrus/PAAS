@@ -21,7 +21,8 @@ gcloud storage buckets create gs://malafrus-bucket-velib-libre --project=android
 [Documentation Pub/Sub](https://cloud.google.com/pubsub/docs/create-topic?hl=fr) <br/>
 
 ```
-gcloud pubsub topics create malafrus-pubsub-ask-api-jcdecaux
+gcloud pubsub topics create pubsub-api-jcdecaux
+gcloud pubsub subscriptions create --topic pubsub-api-jcdecaux subscription-api-jcdecaux
 ```
 
 ### 3.Création du Cloud Scheduler
