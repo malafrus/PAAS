@@ -12,3 +12,10 @@ Création d'une application pour réservation de Vélib, qui fait des prévision
 ## CREATION
 
 ## BUDGET
+- Cloud Scheduler : https://cloud.google.com/scheduler/pricing?hl=fr  
+Le Cloud Scheduler est gratuit car on nous offre jusqu'à 3 jobs par mois. Sans cette offre, le service nous couterais 0,1/jour soit 0,003$.
+
+- Pub/sub : https://cloud.google.com/pubsub/pricing?hl=fr
+
+- Bucket : https://cloud.google.com/storage/pricing?hl=fr#europe
+  
