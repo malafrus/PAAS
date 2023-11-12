@@ -5,7 +5,8 @@ Création d'une application pour réservation de Vélib, qui fait des prévision
 
 ## BESOIN
 - Cloud Scheduler :      Programme le pub/sub pour qu'il s'effectue régulièrement.
-- Pub/sub :              Faire une requête sur l'API JCDecaux et le stock dans un bucket.
+- Pub/sub :              Faire une requête sur l'API JCDecaux et le stock dans un Bucket
+- Function:              Définir une fonction qui enregistre nos données dans le Bucket
 - Bucket :               Stock le résultat des requêtes pour faire un historique.
   
 ## CREATION
@@ -24,11 +25,18 @@ gcloud pubsub topics create pubsub-api-jcdecaux
 gcloud pubsub subscriptions create --topic pubsub-api-jcdecaux subscription-api-jcdecaux
 ```
 
-### 3.Création du Cloud Scheduler
+### 3.Deployement de la function
+[Documentation Function](https://cloud.google.com/functions/docs/deploy?hl=fr) <br/>
+```
+gcloud functions deploy malafrus-function-trigger --gen2 --region=europe-west9 --runtime=nodejs18 --source=. --trigger-topic=pubsub-api-jcdecaux --allow-unauthenticated
+```
+On compile ensuite notre code en javascript.
+
+### 4.Création du Cloud Scheduler
 [Documentation Cloud Scheduler](https://cloud.google.com/scheduler/docs/creating?hl=fr#gcloud) <br/>
 
 ```
-
+cloud functions deploy malafrus-function-trigger --gen2 --region=europe-west9 --runtime=nodejs18 --source=. --trigger-topic=pubsub-api-jcdecaux --allow-unauthenticated
 ```
 
 ## BUDGET
@@ -41,8 +49,15 @@ Le service de Pub/sub nous reviens à 0$ car les axes de payements sont les suiv
     - le cout de stockage, hors les données ne seront pas stockées ici, mais dans le Bocket. Le prix sera donc nul.
     - le cout de débit peut vite monter, mais 10Go sont offerts tous les mois. Notre application ne dépassant pas ce débit, on peut considérer son prix comme nul.
 
+- Function : [Tarif Function](https://cloud.google.com/functions/pricing?hl=fr) <br/>
+Le service de Function nous est en "offert" car on nous offre une cagniote de première utilisation amplement nécessaire pour notre projet.
+
 - Bucket : [Tarif Bucket](https://cloud.google.com/storage/pricing?hl=fr#europe) <br/>
 Le prix du bucket s'estime en fonction de la région et de la volumetrie par mois. Etant données que notre API se trouve en france, il serai plus intéressant de stocker nos données en france. On prend donc la région de Paris (europe-west9) ce qui nous revient à 0,0023$/mois.
 
 Le prix total de toutes l'application serait donc estimé à 0,0023$.
+
+## CONFIRMATION DU BUDGET
+Après un mois d'utilisation, on observe qu'aucun dollard n'a été prélévé. On considére donc notre budgétisation exacte.
+
   
