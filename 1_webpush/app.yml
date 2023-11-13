@@ -1,2 +1,0 @@
-runtime: nodejs20
-entrypoint: src/app.js
